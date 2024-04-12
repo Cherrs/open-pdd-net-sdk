@@ -8,7 +8,9 @@
 		<Company>Geethin</Company>
 		<Description>拼多多开放平台.NET SDK核心类库</Description>
 		<PackageReleaseNotes>同步官方接口到最新(202401);
-		支持更多的目标框架</PackageReleaseNotes>
+支持更多的目标框架;
+添加文档注释生成;
+	</PackageReleaseNotes>
 		<PackageProjectUrl>https://github.com/niltor/open-pdd-net-sdk</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/niltor/open-pdd-net-sdk</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -18,12 +20,12 @@
 		<FileVersion>0.1.0.0</FileVersion>
 		<PackageLicenseUrl></PackageLicenseUrl>
 		<PackageIcon>logo.jpg</PackageIcon>
-		<Version>8.0.2</Version>
+		<Version>8.0.3</Version>
 		<PackageId>MSDev.PddOpenSdk</PackageId>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<Copyright />
 		<OutputType>Library</OutputType>
-		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
 	</PropertyGroup>
 
