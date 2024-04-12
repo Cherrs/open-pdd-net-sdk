@@ -20,7 +20,7 @@
 		<PackageLicenseUrl></PackageLicenseUrl>
 		<PackageIcon>logo.jpg</PackageIcon>
 		<PackageId>MSDev.PddOpenSdk.AspNetCore</PackageId>
-		<Version>8.0.2</Version>
+		<Version>8.0.3</Version>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
 	</PropertyGroup>
@@ -30,6 +30,7 @@
 		<Title>PddOpenSdk.AspNetCore</Title>
 		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 
 
