@@ -28,7 +28,8 @@ public class PddCommonApi
         Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
         ReferenceHandler = ReferenceHandler.IgnoreCycles,
-        WriteIndented = true
+        WriteIndented = true,
+        Converters = { new CustomStringConverter() }
     };
 
     public PddCommonApi()
@@ -274,3 +275,35 @@ public class CommonReqeustParams
     /// </summary>
     public string Sign { get; set; }
 }
+
+/// <summary>
+/// 自定义 转换器，兼容使用字符串接收其它类型
+/// </summary>
+public class CustomStringConverter : JsonConverter<string>
+{
+    public override string Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        if (reader.TokenType == JsonTokenType.String)
+        {
+            return reader.GetString();
+        }
+        else if (reader.TokenType == JsonTokenType.Number && typeToConvert.FullName == "System.String")
+        {
+            if (reader.TryGetInt64(out long longValue))
+            {
+                return longValue.ToString();
+            }
+            else
+            {
+                return reader.GetDouble().ToString();
+            }
+        }
+        return default;
+    }
+
+    public override void Write(Utf8JsonWriter writer, string value, JsonSerializerOptions options)
+    {
+        writer.WriteStringValue(value);
+    }
+}
+
