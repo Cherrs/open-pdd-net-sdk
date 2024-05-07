@@ -307,6 +307,12 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             public double? OrderChangeAmount { get; set; }
 
             /// <summary>
+            /// 合单ID
+            /// </summary>
+            [JsonPropertyName("open_address_id")]
+            public string OpenAddressId { get; set; }
+
+            /// <summary>
             /// 仓库信息
             /// </summary>
             [JsonPropertyName("order_depot_info")]
