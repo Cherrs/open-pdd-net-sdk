@@ -20,7 +20,7 @@
 		<PackageLicenseUrl></PackageLicenseUrl>
 		<PackageIcon>logo.jpg</PackageIcon>
 		<PackageId>MSDev.PddOpenSdk.AspNetCore</PackageId>
-		<Version>8.0.4</Version>
+		<Version>8.0.5</Version>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
 	</PropertyGroup>
