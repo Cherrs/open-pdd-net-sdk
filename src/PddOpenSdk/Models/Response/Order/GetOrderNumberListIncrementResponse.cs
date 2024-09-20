@@ -301,16 +301,16 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             public int? OnlySupportReplace { get; set; }
 
             /// <summary>
-            /// 订单改价折扣金额，单位元
-            /// </summary>
-            [JsonPropertyName("order_change_amount")]
-            public double? OrderChangeAmount { get; set; }
-
-            /// <summary>
             /// 合单ID
             /// </summary>
             [JsonPropertyName("open_address_id")]
             public string OpenAddressId { get; set; }
+
+            /// <summary>
+            /// 订单改价折扣金额，单位元
+            /// </summary>
+            [JsonPropertyName("order_change_amount")]
+            public double? OrderChangeAmount { get; set; }
 
             /// <summary>
             /// 仓库信息
@@ -331,7 +331,7 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             public int? OrderStatus { get; set; }
 
             /// <summary>
-            /// 订单标签列表，no_trace_delivery=无痕发货，only_support_replace=只换不修，duoduo_wholesale=多多批发，return_freight_payer=退货包运费，free_sf=顺丰包邮，support_nationwide_warranty=全国联保，self_contained=门店自提，delivery_one_day=当日发货，oversea_tracing=全球购溯源，distributional_sale=分销订单，open_in_festival=不打烊，region_black_delay_shipping=发货时间可延迟，same_city_distribution=同城配送，has_subsidy_postage=补贴运费红包，has_sf_express_service=顺丰加价，community_group=小区团购，has_ship_additional=加运费发顺丰，ship_additional_order=加运费补差价订单，conso_order=集运订单，allergy_refund=过敏包退，professional_appraisal=专业鉴定，ship_hold=暂停发货
+            /// 订单标签列表，no_trace_delivery=无痕发货，only_support_replace=只换不修，duoduo_wholesale=多多批发，return_freight_payer=退货包运费，free_sf=顺丰包邮，support_nationwide_warranty=全国联保，self_contained=门店自提，delivery_one_day=当日发货，oversea_tracing=全球购溯源，distributional_sale=分销订单，open_in_festival=不打烊，region_black_delay_shipping=发货时间可延迟，same_city_distribution=同城配送，has_subsidy_postage=补贴运费红包，has_sf_express_service=顺丰加价，community_group=小区团购，has_ship_additional=加运费发顺丰，ship_additional_order=加运费补差价订单，conso_order=集运订单，allergy_refund=过敏包退，professional_appraisal=专业鉴定，ship_hold=暂停发货，home_delivery_door=送货上门，direct_mail_activity=直邮活动，local_depot=本地仓订单
             /// </summary>
             [JsonPropertyName("order_tag_list")]
             public List<OrderTagListResponse> OrderTagList { get; set; }
@@ -499,7 +499,7 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             public double? SellerDiscount { get; set; }
 
             /// <summary>
-            /// 服务费明细列表，sf_express_fee=顺丰加价服务
+            /// 服务费明细列表，sf_express_fee=顺丰加价服务，install_fee=上门安装服务，store_install_fee=到店安装服务，take_to_store_install_fee=携货到店安装，dismantle_and_home_install_fee=拆旧+上门安装
             /// </summary>
             [JsonPropertyName("service_fee_detail")]
             public List<ServiceFeeDetailResponse> ServiceFeeDetail { get; set; }
@@ -613,7 +613,7 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             {
 
                 /// <summary>
-                /// 集运类型 0-中国香港集运、1-中国新疆中转、2-哈萨克斯坦集运、3-中国西藏中转、5-日本集运、6-中国台湾集运、7-韩国集运、8-新加坡集运、9-马来西亚集运、10-泰国集运、11-越南集运、12-吉尔吉斯斯坦集运、13-乌兹别克斯坦集运
+                /// 集运类型 0-中国香港集运、1-中国新疆中转、2-哈萨克斯坦集运、3-中国西藏中转、5-日本集运、6-中国台湾集运、7-韩国集运、8-新加坡集运、9-马来西亚集运、10-泰国集运、11-越南集运、12-吉尔吉斯斯坦集运、13-乌兹别克斯坦集运、14-中国甘肃中转、15-中国内蒙古中转、16-中国宁夏中转、17-中国青海中转、18-中国澳门集运、19-柬埔寨集运、20-老挝集运、21-塔吉克斯坦集运、22-亚美尼亚集运、23-格鲁吉亚集运
                 /// </summary>
                 [JsonPropertyName("consolidate_type")]
                 public int? ConsolidateType { get; set; }

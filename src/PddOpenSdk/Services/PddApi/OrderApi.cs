@@ -17,6 +17,15 @@ public class OrderApi : PddCommonApi
     }
 
     /// <summary>
+    /// 订单基础信息列表查询接口（根据成交时间）
+    /// </summary>
+    public async Task<GetOrderBasicListResponse> GetOrderBasicListAsync(GetOrderBasicList getOrderBasicList)
+    {
+        var result = await PostAsync<GetOrderBasicList, GetOrderBasicListResponse>("pdd.order.basic.list.get", getOrderBasicList);
+        return result;
+    }
+
+    /// <summary>
     /// 订单详情
     /// </summary>
     public async Task<GetOrderInformationResponse> GetOrderInformationAsync(GetOrderInformation getOrderInformation)
@@ -31,6 +40,15 @@ public class OrderApi : PddCommonApi
     public async Task<GetOrderListResponse> GetOrderListAsync(GetOrderList getOrderList)
     {
         var result = await PostAsync<GetOrderList, GetOrderListResponse>("pdd.order.list.get", getOrderList);
+        return result;
+    }
+
+    /// <summary>
+    /// 合并发货订单分组
+    /// </summary>
+    public async Task<GroupOrderMergeShipOrderResponse> GroupOrderMergeShipOrderAsync(GroupOrderMergeShipOrder groupOrderMergeShipOrder)
+    {
+        var result = await PostAsync<GroupOrderMergeShipOrder, GroupOrderMergeShipOrderResponse>("pdd.order.merge.ship.order.group", groupOrderMergeShipOrder);
         return result;
     }
 
@@ -58,6 +76,24 @@ public class OrderApi : PddCommonApi
     public async Task<GetOrderPromiseInfoResponse> GetOrderPromiseInfoAsync(GetOrderPromiseInfo getOrderPromiseInfo)
     {
         var result = await PostAsync<GetOrderPromiseInfo, GetOrderPromiseInfoResponse>("pdd.order.promise.info.get", getOrderPromiseInfo);
+        return result;
+    }
+
+    /// <summary>
+    /// 获取订单优惠明细数据
+    /// </summary>
+    public async Task<GetOrderPromotionResponse> GetOrderPromotionAsync(GetOrderPromotion getOrderPromotion)
+    {
+        var result = await PostAsync<GetOrderPromotion, GetOrderPromotionResponse>("pdd.order.promotion.get", getOrderPromotion);
+        return result;
+    }
+
+    /// <summary>
+    /// 订单检索接口
+    /// </summary>
+    public async Task<OrderOrderSearchResponse> OrderOrderSearchAsync(OrderOrderSearch orderOrderSearch)
+    {
+        var result = await PostAsync<OrderOrderSearch, OrderOrderSearchResponse>("pdd.order.search.order", orderOrderSearch);
         return result;
     }
 
