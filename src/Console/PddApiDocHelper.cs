@@ -85,7 +85,7 @@ public class PddApiDocHelper
         {
             var response = await hc.GetStringAsync(ListUrl);
             var result = JsonSerializer.Deserialize<ListResponseModel>(response);
-            result.Result.Add(new PddCatInfo { Id = 1, Name = "订单API" }); //新增快团团相关接口
+            result.Result.Add(new PddCatInfo { Id = 50, Name = "快团团API" }); //新增快团团相关接口
             return result.Result;
         }
         catch (System.Exception e)
