@@ -61,6 +61,7 @@ public class PddApiDocHelper
         CatMapClassName.Add("46", "Mall");
         CatMapClassName.Add("48", "Oversea");
         CatMapClassName.Add("49", "Ticket");
+        CatMapClassName.Add("50", "Ktt");
         //CatMapClassName.Add("54", "PictureTool");
 
         // === 待定
@@ -84,6 +85,7 @@ public class PddApiDocHelper
         {
             var response = await hc.GetStringAsync(ListUrl);
             var result = JsonSerializer.Deserialize<ListResponseModel>(response);
+            result.Result.Add(new PddCatInfo { Id = 1, Name = "订单API" }); //新增快团团相关接口
             return result.Result;
         }
         catch (System.Exception e)
