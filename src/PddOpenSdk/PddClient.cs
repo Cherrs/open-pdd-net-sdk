@@ -111,6 +111,10 @@ public class PddClient
     /// </summary>
     public TicketApi TicketApi { get; }
 
+    /// <summary>
+    /// 快团团API
+    /// </summary>
+    public KttApi KttApi { get; }
 
     public ErrorResponse ErrorResponse;
     public ClientConfig Config { get; set; }
