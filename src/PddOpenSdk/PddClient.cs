@@ -149,6 +149,7 @@ public class PddClient
         MallApi = new MallApi(config.ClientId, config.ClientSecret, config.AccessToken);
         OverseaApi = new OverseaApi(config.ClientId, config.ClientSecret, config.AccessToken);
         TicketApi = new TicketApi(config.ClientId, config.ClientSecret, config.AccessToken);
+        KttApi = new KttApi(config.ClientId, config.ClientSecret, config.AccessToken);
 
     }
     protected void SetToken(string accessToken)
@@ -178,6 +179,7 @@ public class PddClient
         MallApi.AccessToken = accessToken;
         OverseaApi.AccessToken = accessToken;
         TicketApi.AccessToken = accessToken;
+        KttApi.AccessToken = accessToken;
 
     }
 
