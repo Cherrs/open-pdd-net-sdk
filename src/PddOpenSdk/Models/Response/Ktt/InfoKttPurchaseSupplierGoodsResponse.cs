@@ -6,8 +6,8 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+    public InfoKttPurchaseSupplierGoodsResponseResponse Response { get; set; }
+    public partial class InfoKttPurchaseSupplierGoodsResponseResponse : PddResponseModel
     {
 
         /// <summary>
@@ -26,14 +26,14 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public InfoKttPurchaseSupplierGoodsResult Result { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+        public partial class InfoKttPurchaseSupplierGoodsResult : PddResponseModel
         {
 
             /// <summary>
